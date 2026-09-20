@@ -11,6 +11,9 @@ Builder).
 <ul><li> <b>Text Files</b>: Text files can be used to document programming notes. They can also be used for LabTalk script and initialization files. Text files have a .txt extension. There are two special types of text files:</li></ul>
 <dl><dd><ul><li><b>Configuration files</b> can define LabTalk variables, macros, and functions, as well as new menu commands.Configuration files have a .cnf extension. If you create a new configuration file in Code Builder, the default extension will be .txt. After creating the file, you can change the extension to .cnf from Windows Explorer.</li>
 <li><b>Initialization files</b> can preset a number of Origin options. (For an example, review the Origin.ini file located in your Origin folder.) Initialization files have a .ini extension. If you create a new initialization file in Code Builder, the default extension will be .txt. After creating the file, you can change the extension to .ini from Windows Explorer.</li></ul></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Working_With_Files/Tip_icon.png?v=21427" width="57"  border="0" /></td><td><p>From Origin2027, Code Builder support drag the file from MDI or workspace tree to other app.
+</p></td></tr></table>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Creating_a_New_File_and_Adding_it_to_the_Workspace"><span class="tocnumber">1</span> <span class="toctext">Creating a New File and Adding it to the Workspace</span></a></li>
@@ -135,7 +138,7 @@ the default contents of new source files.
 <ol><li> Make the file active in the MDI. (You can CTRL+TAB through the open files, select the file from the Window menu, or click on the file in the MDI.)</li>
 <li> Once the file is active, select the <b>File:Add to Workspace</b> menu item or simultaneously press the CTRL+W keyboard keys.</li></ol>
 <h2><a name="Specifying_Workspace_Files_as_Packages_Project_System_Temporary_User.5BAutoLoad.5D_or_User_Files"></a><span class="mw-headline">Specifying Workspace Files as Packages Project System Temporary User[AutoLoad] or User Files</span></h2>
-<p>Files added to the Code Builder workspace can be specified as <b>Apps</b>, <b>Project</b>, <b>System</b>, <b>Temporary</b>, <b>User [AutoLoad]</b> or <b>User</b> files by moving them into their correspondingly named workspace folders. Each of the six predefined folders contain files added to the workspace by different means. Files in all six folders can be moved by dragging them into any other folder, however, files can not be dragged into the <b>Temporary</b> folder. Files can also be removed from the workspace by right-clicking on them in the tree and then selecting <b>Remove</b> from the shortcut menu.
+<p>Files added to the Code Builder workspace can be specified as <b>Apps</b>, <b>Project</b>, <b>System</b>, <b>Temporary</b>, <b>User [AutoLoad]</b> or <b>User</b> files by moving them into their correspondingly named workspace folders. Each of the six predefined folders contain files added to the workspace by different means. Files in all six folders can be moved by dragging them into any other folder, however, files can not be dragged into the <b>Temporary</b> folder. Files can also be removed from the workspace by right-clicking on them in the tree and then selecting <b>Remove</b> from the shortcut menu. From Origin2025, Code Builder support undo and redo when drag file(s) between Workspace Folders.
 </p><p><a  class="image"><img alt="Specify Workspace File.png" src="../images/Working_With_Files/Specify_Workspace_File.png?v=48091" width="542"  /></a>
 </p><p>Files added to the <b>Apps</b> folder are usually managed in its sub-package folders so that the main <b>Apps</b> folder only contains folders. <b>Apps</b> folder is used to manage the *.opx packages and each of its sub-folders represents a disk folder in User Files Folder. A special folder named '<b>Common</b> is used for holding files that are shared between all packages. Each package folder contains a sub-folder named <b>User Files</b>, which contains files that are in the User Files Folder.
 </p><p>Files added to the <b>Project</b> folder are automatically included inside the open Origin project file and are built whenever the Origin project file containing them is opened by Origin. Source files in the <b>Project</b> folder are always available to be executed as long as the Origin project file containing them is opened. Files in the Project folder remain in the <b>Project</b> folder until a new Origin project file (*.OPJ) is opened. Files in the <b>Project</b> folder stay remained even when a new Code Builder workspace is created or opened.
@@ -146,9 +149,6 @@ the default contents of new source files.
 </p><p>For more information on the <b>Apps</b>, <b>Project</b>, <b>System</b>, <b>Temporary</b>, <b>User [AutoLoad]</b> or <b>User</b> workspace folders, see <a href="../../CodeBuilder/CodeBuilder/Working_With_Workspaces.html#Navigating_in_the_Workspace_Using_the_Workspace_Tree" title="CodeBuilder:Working With Workspaces">Navigating in the Workspace Using the Workspace Tree</a>. For more information on when and how files in the Code Builder workspace are built, see <a href="../../OriginC/OCGuide/Compiling,_Linking_and_Loading.html#Automated_Building" title="OCGuide:Compiling, Linking and Loading">Four Methods
 of Building the Code Builder Workspace</a>.
 </p>
-<table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Working_With_Files/Tip_icon.png?v=21427" width="57"  border="0" /></td><td><p>From Origin2025, Code Builder support undo and redo when drag file(s) between Workspace Folders.
-</p></td></tr></table>
 <h2><a name="Locating_Files_that_Contain_a_Specified_Character_String"></a><span class="mw-headline">Locating Files that Contain a Specified Character String</span></h2>
 <p>To find files that contain a specified character string, select <b>Edit:Find in Files</b> or click the <b>Find in Files</b> button <a  class="image"><img alt="Button Find In Files 90.png" src="../images/Working_With_Files/Button_Find_In_Files_90.png?v=43042" width="23"  /></a> on the Standard toolbar.
 </p><p><a  class="image"><img alt="Find In Files.png" src="../images/Working_With_Files/Find_In_Files.png?v=48092" width="399"  /></a>
@@ -180,7 +180,7 @@ double-click on the line in the <b>Output</b> window to open the file. The line 
 <td><b>Note:</b> The MDI is Code Builder's interface for viewing and editing source, header, LabTalk script, and text files. Files can be viewed in the MDI whether or not they are part of the workspace. Similarly, you can close a file in the MDI and its workspace status is not affected.
 </td></tr></table>
 <h2><a name="Removing_Files_from_the_Workspace"></a><span class="mw-headline">Removing Files from the Workspace</span></h2>
-<p>To remove a file from the workspace, select the source file icon in the workspace window (use CTRL or SHIFT for multiple selection) and press DEL or right-click and select <b>Remove</b> from the shortcut menu.
+<p>To remove a file from the workspace, select the source file icon in the workspace window (use CTRL or SHIFT for multiple selection) and press DEL or right-click and select <b>Remove</b> from the shortcut menu. From Origin2025, Code Builder support undo and redo when remove (delete) file(s) from workspace.
 </p><p><a  class="image"><img alt="Remove File From Workspace.png" src="../images/Working_With_Files/Remove_File_From_Workspace.png?v=48096" width="542"  /></a>
 </p>
 <table class="note">
@@ -188,9 +188,6 @@ double-click on the line in the <b>Output</b> window to open the file. The line 
 <tr>
 <td><b>Note:</b> When you remove a file from the workspace, the file still exists (for example, the .C source file).
 </td></tr></table>
-<table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Working_With_Files/Tip_icon.png?v=21427" width="57"  border="0" /></td><td><p>From Origin2025, Code Builder support undo and redo when remove (delete) file(s) from workspace.
-</p></td></tr></table>
 <h2><a name="Excluding_Files_from_the_Workspace"></a><span class="mw-headline">Excluding Files from the Workspace</span></h2>
 <p>To keep a file part of the workspace but to exclude it from the build process, select the source file icon in the workspace window (use CTRL or SHIFT for multiple selection) and then right-click and select <b>Set as Exclude</b> from the shortcut menu. 
 </p><p><a  class="image"><img alt="Excluding Files From Workspace.png" src="../images/Working_With_Files/Excluding_Files_From_Workspace.png?v=48097" width="542"  /></a>
